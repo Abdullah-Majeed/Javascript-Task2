@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <h6>Write a JavaScript program to get the current date.
+        Expected Output :
+        mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy</h6>
+        <h6>Output:</h6>
+        <p id= 'result1' style="font-size: 14px;"></p>
+        <p id= 'result2' style="font-size: 14px;"></p>
+        <p style="font-size: 14px;">Or</p>
+        <p id= 'result3' style="font-size: 14px;"></p>
+        <p id= 'result4' style="font-size: 14px;"></p>
+    <script>
+        let date = new Date();
+        let todayDate = date.getDate();
+        let month = date.getMonth();
+        let year = date.getFullYear();
+        let day = date.getDay();
+        let listOfDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        let listOfMonths = ['Dec', 'Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov']
+        console.log(listOfMonths[month + 1], listOfDays[day], year)
+        document.getElementById('result1').innerHTML = `${listOfMonths[month+1]}-${listOfDays[day]}-${year}`;
+        document.getElementById('result2').innerHTML = `${listOfMonths[month+1]}/${listOfDays[day]}/${year}`;
+        document.getElementById('result3').innerHTML = `${listOfDays[day]}-${listOfMonths[month+1]}-${year}`;
+        document.getElementById('result4').innerHTML = `${listOfDays[day]}/${listOfMonths[month+1]}/${year}`;
+    </script>
+</body>
+
+</html>
